@@ -8,7 +8,7 @@ def main():
     if search not in list_files():
         print(f"Unrecognized language : {search}")
     data = ""
-    with open(f"{PATH}/{search.capitalize()}.gitignore") as f:
+    with open(f"{PATH}/{search}.gitignore") as f:
         data = f.read()
     with open(".gitignore", "w") as f:
         f.write(data)
