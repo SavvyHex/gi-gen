@@ -4,7 +4,11 @@ PATH = "/home/savvyhex/Tools/gi-gen"
 
 def main():
     print("Welcome to the gitignore generator!")
-    search = input("Enter the language for the gitignore you want : ").lower()
+    try:
+        search = input("Enter the language for the gitignore you want : ").lower()
+    except KeyboardInterrupt:
+        print("Execution cancelled by user")
+        exit()
     if search not in list_files():
         print(f"Unrecognized language : {search}")
     data = ""
